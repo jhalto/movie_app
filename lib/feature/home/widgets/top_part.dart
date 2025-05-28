@@ -1,21 +1,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:movie_app/feature/home/controllers/home_controller.dart';
 
 import '../../../core/app_colors/app_colors.dart';
 import '../../../core/text_style/global_text_style.dart';
 
 class TopPart extends StatelessWidget {
-  const TopPart({super.key});
-
+  TopPart({super.key});
+final controller = Get.find<HomeController>();
   @override
   Widget build(BuildContext context) {
+    var screenWidth = MediaQuery.of(context).size.width;
     return Stack(
             children: [
               SizedBox(
                 height: 393,
                 width: double.infinity,
-                child: Image.asset("assets/image1.png", fit: BoxFit.cover),
+                child:Obx(() => Image.asset("${controller.selectedCaro}", fit: BoxFit.cover),) 
               ),
               Container(
                 height: 393,
@@ -49,7 +52,7 @@ class TopPart extends StatelessWidget {
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withValues(alpha: .65),
+                        color: Colors.black.withValues(alpha: .25),
                         blurRadius: 40,
                       ),
                     ],
@@ -65,9 +68,43 @@ class TopPart extends StatelessWidget {
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withValues(alpha: .65),
+                        color: Colors.black.withValues(alpha: .20),
                         blurRadius: 20,
                         
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                height: 393 / 8, // bottom half
+                child: Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: .30),
+                        blurRadius: 40
+                        
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                height: 393 / 18, // bottom half
+                child: Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: .55),
+                        blurRadius: 8,
+                         offset: Offset(-10, 10),
                       ),
                     ],
                   ),
@@ -207,7 +244,7 @@ class TopPart extends StatelessWidget {
                           Container(
                             padding: EdgeInsets.symmetric(
                               vertical: 10,
-                              horizontal: 30,
+                              horizontal:screenWidth<400?15: 30,
                             ),
                             height: 44,
                             decoration: BoxDecoration(

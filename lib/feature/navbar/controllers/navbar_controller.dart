@@ -5,6 +5,9 @@ import 'package:movie_app/feature/home/views/home_screen.dart';
 
 class NavbarController extends HomeController{
 
+  @override
+  
+  // ignore: overridden_fields
   RxInt selectedIndex = 0.obs;
 
 
