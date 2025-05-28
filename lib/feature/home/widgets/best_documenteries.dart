@@ -38,7 +38,7 @@ class BestDocumentaries extends StatelessWidget {
           ),
           SizedBox(height: 24),
           SizedBox(
-            height: 200,
+            height: 150,
             child: ListView.builder(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
