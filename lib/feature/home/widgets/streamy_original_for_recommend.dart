@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movie_app/core/text_style/global_text_style.dart';
 import 'package:movie_app/feature/home/controllers/home_controller.dart';
-import 'package:movie_app/feature/home/views/recomend_for_you.dart';
-
 import '../../../core/app_colors/app_colors.dart';
 
-class StreamlyOriginal extends StatelessWidget {
-  StreamlyOriginal({super.key});
+class StreamlyOriginalForRecommendItemView extends StatelessWidget {
+  StreamlyOriginalForRecommendItemView({super.key});
  final controller = Get.find<HomeController>();
   @override
   Widget build(BuildContext context) {
@@ -25,25 +23,7 @@ class StreamlyOriginal extends StatelessWidget {
                 fw: FontWeight.w500,
                 color: AppColors.whiteColor,
               ),),
-              ClipRRect(
-                borderRadius: BorderRadiusGeometry.circular(10),
-                child: InkWell(
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => RecomendForYou()));
-                  },
-                  child: Container(
-                    color: Colors.transparent,
-                    child: Text(
-                      "Recommended",
-                      style: globalTextStyle(
-                        size: 14,
-                        fw: FontWeight.w500,
-                        color: Color(0xff7A24BC),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+             
             ],
           ),
           SizedBox(height: 16,),
