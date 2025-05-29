@@ -1,12 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movie_app/feature/home/widgets/carosel_item_view.dart';
 import 'package:movie_app/feature/home/widgets/recomend_view.dart';
-import 'package:movie_app/feature/home/widgets/streamly_original.dart';
 import 'package:movie_app/feature/home/widgets/streamy_original_for_recommend.dart';
 import 'package:movie_app/feature/home/widgets/top_part.dart';
-
 import '../../../core/app_colors/app_colors.dart';
 import '../controllers/home_controller.dart';
 import '../widgets/best_documenteries.dart';

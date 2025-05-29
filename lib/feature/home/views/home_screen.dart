@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movie_app/feature/home/controllers/home_controller.dart';
@@ -12,7 +10,6 @@ import 'package:movie_app/feature/home/widgets/popular_movies.dart';
 import 'package:movie_app/feature/home/widgets/streamly_original.dart';
 import 'package:movie_app/feature/home/widgets/top_part.dart';
 import 'package:movie_app/feature/home/widgets/tv_show.dart';
-
 import '../../../core/app_colors/app_colors.dart';
 
 class HomeScreen extends StatelessWidget {

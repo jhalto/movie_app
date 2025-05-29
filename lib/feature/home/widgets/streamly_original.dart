@@ -1,10 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movie_app/core/text_style/global_text_style.dart';
 import 'package:movie_app/feature/home/controllers/home_controller.dart';
 import 'package:movie_app/feature/home/views/recomend_for_you.dart';
-
 import '../../../core/app_colors/app_colors.dart';
 
 class StreamlyOriginal extends StatelessWidget {

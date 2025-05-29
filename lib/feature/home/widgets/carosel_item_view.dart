@@ -100,7 +100,7 @@ class CaroselItemView extends StatelessWidget {
                       height: 4,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: const Color(0xff7A24BC).withOpacity(opacity),
+                        color: const Color(0xff7A24BC).withValues(alpha: opacity),
                       ),
                     );
                   }),
