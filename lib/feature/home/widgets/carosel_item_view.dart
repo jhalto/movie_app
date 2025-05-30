@@ -26,7 +26,8 @@ class CaroselItemView extends StatelessWidget {
                   onTap: () {
                     controller.selectedIndex.value = index;
                     controller.selectedCaro.value =
-                        controller.caroselItems[index];
+                        controller.caroselItems[index].imagePath;
+                        controller.selectedVideo.value = controller.caroselItems[index].moviePath;
                   },
                   child: Padding(
                     padding: const EdgeInsets.only(right: 8.0),
@@ -46,7 +47,7 @@ class CaroselItemView extends StatelessWidget {
                             ),
 
                             child: Image.asset(
-                              controller.caroselItems[index],
+                              controller.caroselItems[index].imagePath,
                               width: 80,
                               fit: BoxFit.cover,
                             ),

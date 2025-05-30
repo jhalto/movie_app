@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movie_app/feature/navbar/views/navbar_view.dart';
+import 'package:movie_app/feature/navbar/views/persistent_nav_bar.dart';
 
 void main() {
  
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         ),
-        home: NavbarView(),
+        home: PersistenBottomNavBarDemo(),
       ),
     ));
   }

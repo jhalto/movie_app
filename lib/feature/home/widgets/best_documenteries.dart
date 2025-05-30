@@ -53,7 +53,7 @@ class BestDocumentaries extends StatelessWidget {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: Image.asset(
-                            controller.caroselItems[index],
+                            controller.caroselItems[index].imagePath,
                             width: 150,
                             height: 88,
                             fit: BoxFit.cover,

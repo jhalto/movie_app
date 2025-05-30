@@ -53,13 +53,13 @@ class PopularDrama extends StatelessWidget {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: Image.asset(
-                            controller.caroselItems[index],
+                            controller.caroselItems[index].imagePath,
                             width: 150,
                             height: 88,
                             fit: BoxFit.cover,
                           ),
                         ),
-                        Text("Hip Hop Road Redemtion",style: globalTextStyle(
+                        Text(controller.caroselItems[index].name,style: globalTextStyle(
                           size: 16,
                           color: Colors.white
                         ),maxLines: 2,overflow: TextOverflow.ellipsis,)
