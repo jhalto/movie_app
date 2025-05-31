@@ -28,6 +28,7 @@ class CaroselItemView extends StatelessWidget {
                     controller.selectedCaro.value =
                         controller.caroselItems[index].imagePath;
                         controller.selectedVideo.value = controller.caroselItems[index].moviePath;
+                        controller.selectRecommendItem(index);
                   },
                   child: Padding(
                     padding: const EdgeInsets.only(right: 8.0),

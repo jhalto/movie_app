@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:movie_app/core/app_colors/app_colors.dart';
 import 'package:movie_app/feature/home/views/home_screen.dart';
+import 'package:movie_app/feature/library/views/content_library_view.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
 import '../../../core/text_style/global_text_style.dart';
@@ -41,7 +42,9 @@ class PersistenBottomNavBarDemo extends StatelessWidget {
           ),
 
           PersistentTabConfig(
-            screen: HomeScreen(),
+            screen: Center(
+              child: Text("Live"),
+            ),
             item: ItemConfig(
               inactiveIcon: Container(
                 padding: const EdgeInsets.all(12.0),
@@ -62,7 +65,7 @@ class PersistenBottomNavBarDemo extends StatelessWidget {
             ),
           ),
           PersistentTabConfig(
-            screen: HomeScreen(),
+            screen: ContentLibraryView(),
             item: ItemConfig(
               inactiveIcon: Container(
                 padding: const EdgeInsets.all(12.0),
@@ -83,7 +86,9 @@ class PersistenBottomNavBarDemo extends StatelessWidget {
             ),
           ),
           PersistentTabConfig(
-            screen: HomeScreen(),
+            screen: Center(
+              child: Text("Favourite"),
+            ),
             item: ItemConfig(
               inactiveIcon: Container(
                 padding: const EdgeInsets.all(12.0),
@@ -104,7 +109,9 @@ class PersistenBottomNavBarDemo extends StatelessWidget {
             ),
           ),
           PersistentTabConfig(
-            screen: HomeScreen(),
+            screen: Center(
+              child: Text("Profile"),
+            ),
             item: ItemConfig(
               inactiveIcon: Container(
                 padding: const EdgeInsets.all(12.0),
